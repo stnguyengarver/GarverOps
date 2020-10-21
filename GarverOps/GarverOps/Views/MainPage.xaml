@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Name="mainPage"
+             
+             x:Class="GarverOps.MainPage">
+ 
+    <NavigationPage.TitleView >
+      
+ 
+            <StackLayout Margin="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Image Source="menu.png" HeightRequest="18" HorizontalOptions="Start">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OpenSwipe"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            <pv:PancakeView Margin="30,0,0,0" CornerRadius="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" >
+                <StackLayout Orientation="Horizontal">
+                    <Entry Margin="20,0,0,0" Text="{Binding SearchText}"   FontSize="Medium" WidthRequest="100"  HeightRequest="30" TextColor="Blue" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" />
+
+
+
+                    <Image Margin="5,5,20,5"   Source="search.png"  HeightRequest="40" WidthRequest="40" HorizontalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SearchClicked}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </StackLayout>
+          
+            </pv:PancakeView>
+            <Image   Source="favorite.png"  HeightRequest="40" WidthRequest="40" HorizontalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ItemClicked}" CommandParameter="Favorites"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+  
+
+  
+    </NavigationPage.TitleView>
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Aspect="AspectFill" Source="bg.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView BackgroundColor="#782f40" Opacity="0.9"/>
+        <SwipeView x:Name="MainSwipeView" BackgroundColor="Transparent"
+                   SwipeStarted="SwipeStarted" 
+                   SwipeEnded="SwipeEnded"
+                   >
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItemView>
+                        <Grid>
+                            <StackLayout Spacing="20" Padding="35" WidthRequest="250" BindableLayout.ItemsSource="{Binding MyCalcMenu}" 
+                                         VerticalOptions="CenterAndExpand">
+                              
+                                
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout.GestureRecognizers>
+                                              
+                                    
+                                                <TapGestureRecognizer 
+                                                    Tapped="CloseSwipe"
+                                                    Command="{Binding Source={x:Reference mainPage}, Path=BindingContext.ItemClicked}"
+                                                    CommandParameter="{Binding Name}" 
+                                                    NumberOfTapsRequired="1"/>
+                                            </StackLayout.GestureRecognizers>
+                                            
+                                            
+                                            <pv:PancakeView BackgroundColor="#557ED2" HeightRequest="30" 
+                                                            WidthRequest="30" CornerRadius="15" VerticalOptions="Center" 
+                                                            HorizontalOptions="Start">
+                                                <Image Source="{Binding Icon}" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" 
+                                                       HorizontalOptions="Center"/>
+                                            </pv:PancakeView>
+                                            <Label Text="{Binding Name}" TextColor="White" FontSize="15" FontAttributes="Bold" 
+                                                   HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </Grid>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+        
+                <Grid x:Name="swipeContent">
+                    <pv:PancakeView x:Name="pancake" BackgroundColor="White">
+                        <Grid VerticalOptions="StartAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+
+                            </Grid.RowDefinitions>
+
+
+
+
+
+    
+
+
+                            <StackLayout Margin="50,0,0,20" Grid.Row="1"  Orientation="Horizontal">
+                            <Image Source="GarverAlternative.png" HeightRequest="80" WidthRequest="200" ></Image>
+                            <Label  Text=" Ops" TextColor="#782f40" FontSize="30" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+
+                            </StackLayout>
+
+
+
+                        <ScrollView Grid.Row="2">
+                            <StackLayout  Spacing="10" Padding="30,0,0,0"   BindableLayout.ItemsSource="{Binding CalcMenuFront}" >
+
+
+
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Expander IsExpanded="{Binding IsExpanded, Mode=TwoWay}">
+                                            <Expander.Header>
+
+                                                <StackLayout Orientation="Horizontal">
+
+
+
+                                                        <StackLayout Spacing="2"  >
+                                                        <Image  Source="{Binding ExpandIcon}" Opacity=".8" WidthRequest="50" HeightRequest="50"   HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand"/>
+                                                        </StackLayout>
+                                             
+
+
+                                                    <pv:PancakeView Padding="20,10" 
+                                                                CornerRadius="20,0,20,0" 
+                                                                BackgroundColor="#782f40" 
+                                                                HorizontalOptions="FillAndExpand" 
+                                                                VerticalOptions="FillAndExpand"
+                                                     
+                                                               >
+
+                                                                                     
+                                                            <StackLayout Spacing="20" Orientation="Horizontal">
+
+                                                                <StackLayout.GestureRecognizers>
+
+
+                                                                    <TapGestureRecognizer 
+                                                                    Tapped="CloseSwipe"
+                                                                    Command="{Binding Source={x:Reference mainPage}, Path=BindingContext.ItemClicked}"
+                                                                    CommandParameter="{Binding Code}" 
+                                                                    NumberOfTapsRequired="1"/>
+
+                                                                </StackLayout.GestureRecognizers>
+
+                                                                <Image  Source="{Binding Icon}" WidthRequest="40" HeightRequest="35"/>
+                                                                <Label Text="{Binding Name}" TextColor="White" FontSize="14" VerticalOptions="Center"/>
+
+                                                            </StackLayout>
+                                                      
+                                                    </pv:PancakeView>
+                                                    
+                                                    
+                                                </StackLayout>
+                 
+                                                       
+                                            </Expander.Header>
+                                            <Expander.Content>
+                                                <StackLayout Margin="100,10,0,0" BindableLayout.ItemsSource="{Binding SubCat}">
+
+                                                    <BindableLayout.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <pv:PancakeView Padding="20,10" 
+                                                                        CornerRadius="20" 
+                                                                        BackgroundColor="LightGray" 
+                                                                        HorizontalOptions="StartAndExpand" 
+                                                                        VerticalOptions="Start"
+                                                                        WidthRequest="200">
+
+                                                                <StackLayout Spacing="20" Orientation="Horizontal">
+
+                                                                    <StackLayout.GestureRecognizers>
+
+
+                                                                        <TapGestureRecognizer 
+                                                                    Tapped="CloseSwipe"
+                                                                    Command="{Binding Source={x:Reference mainPage}, Path=BindingContext.ItemClicked}"
+                                                                    CommandParameter="{Binding Code}" 
+                                                                    NumberOfTapsRequired="1"/>
+
+                                                                    </StackLayout.GestureRecognizers>
+
+                                                                    <Label Text="{Binding Name}" FontSize="14" VerticalOptions="Center"/>
+
+                                                                </StackLayout>
+                                                            </pv:PancakeView>
+                                                        </DataTemplate>
+                                                    </BindableLayout.ItemTemplate>
+                                                </StackLayout>
+                                            </Expander.Content>
+                                        </Expander>
+
+
+
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+
+                            </StackLayout>
+
+
+                        </ScrollView>
+
+                       
+
+                        </Grid>
+                    </pv:PancakeView>
+                </Grid>
+      
+   
+        </SwipeView>
+    </Grid>
+
+</ContentPage>

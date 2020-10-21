@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="tab1"
+             x:Class="GarverOps.Views.EPA">
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding Title}" TextColor="White" FontSize="Small" />
+    </NavigationPage.TitleView>
+
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}" WidthRequest="300">
+                <StackLayout  BackgroundColor="LightGray" Orientation="Vertical">
+                    <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                    <ScrollView Orientation="Horizontal" BackgroundColor="Black">
+                        <StackLayout Margin="2" Orientation="Vertical"  BackgroundColor="AntiqueWhite">
+                        
+                            <Grid Margin="0" HeightRequest="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="180"/>
+                                    <ColumnDefinition Width="180"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Margin="0" BackgroundColor="Gray" Text="Contaminant" TextColor="White" />
+                                <Label Margin="0" BackgroundColor="Gray" Grid.Column="1" Text="MCLG (mg/L)" />
+                                <Label BackgroundColor="Gray" Grid.Column="2" Text="MCL or TT (mg/L)" />
+                                <Label BackgroundColor="Gray" Grid.Column="3" Text="Potential Health Effects" />
+                                <Label BackgroundColor="Gray" Grid.Column="4" Text="Sources of Contaminant" />
+
+                            </Grid>
+                            <ScrollView Orientation="Vertical">
+
+                                <StackLayout Orientation="Vertical" BindableLayout.ItemsSource="{Binding Rows}">
+
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="160"/>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="180"/>
+                                                    <ColumnDefinition Width="180"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label BackgroundColor="LightGray" Text="{Binding Column1}"/>
+                                                <Label Grid.Column="1" Text="{Binding Column2}" />
+                                                <Label Grid.Column="2" Text="{Binding Column3}" />
+                                                <Label Grid.Column="3" Text="{Binding Column4}" />
+                                                <Label Grid.Column="4" Text="{Binding Column5}" />
+
+                                            </Grid>
+                                        </DataTemplate>
+
+                                    </BindableLayout.ItemTemplate>
+
+                                </StackLayout>
+
+                            </ScrollView>
+
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+       
+          
+      
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+    
+    
+    
+    
+    
+</TabbedPage>

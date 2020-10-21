@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="GarverOps.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <pv:PancakeView HeightRequest="200"  WidthRequest="300" BackgroundColor="Orange" CornerRadius="40" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+
+                <Label Text="Feature to be implemented soon"
+                       FontSize="20"
+                       TextColor="red"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            </pv:PancakeView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="GarverOps.Views.Search">
+
+
+
+    <NavigationPage.TitleView >
+
+
+        <StackLayout Margin="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+   
+
+            <pv:PancakeView Margin="30,0,0,0" CornerRadius="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" >
+                <StackLayout Orientation="Horizontal">
+                    <Entry Margin="20,0,0,0" Text="{Binding SearchText}"   FontSize="Medium" WidthRequest="100"  HeightRequest="30" TextColor="Blue" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" />
+
+
+
+                    <Image Margin="5,5,20,5"   Source="search.png"  HeightRequest="40" WidthRequest="40" HorizontalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SearchClicked}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </StackLayout>
+
+            </pv:PancakeView>
+
+        </StackLayout>
+
+
+
+    </NavigationPage.TitleView>
+
+
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <pv:PancakeView Padding="20,10" 
+                            CornerRadius="0,0,20,0"
+                            BackgroundColor="#c29510" 
+                            HorizontalOptions="StartAndExpand" 
+                            VerticalOptions="Start"
+                            WidthRequest="400">
+
+
+                <Label Text="Search Result :"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"
+                   TextColor="Black"/>
+
+
+            </pv:PancakeView>
+
+
+    
+
+
+
+   
+                
+                <Label Margin="10" Text="{Binding SearchMessage}"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand" />
+
+         
+      
+
+
+
+
+
+
+            <ScrollView>
+                <StackLayout 
+                        HorizontalOptions="CenterAndExpand" 
+                         Spacing="2" Padding="10,0,0,0"   
+                         BindableLayout.ItemsSource="{Binding SubCats}" >
+
+
+
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+
+                            <Expander >
+                                <Expander.Header>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <pv:PancakeView             Margin="5,5,5,0"
+                                                                CornerRadius="20,20,20,0" 
+                                                                BackgroundColor="#782f40" 
+                                                                HorizontalOptions="FillAndExpand" 
+                                                                VerticalOptions="Start"
+                                                                WidthRequest="400"
+                                                                HeightRequest="40">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Margin="20,0,0,0" Text="{Binding Equation.Name}" TextColor="White" FontSize="14" VerticalOptions="Center"/>
+
+                                            </StackLayout>
+
+
+                                        </pv:PancakeView>
+                                    </StackLayout>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <StackLayout Orientation="Vertical">
+
+                                        <pv:PancakeView   Margin="5,0,5,0" Padding="10" CornerRadius="0,0,20,20" BackgroundColor="Gray" 
+                                                            HorizontalOptions="End" VerticalOptions="Start">
+
+                                            <StackLayout Orientation="Vertical" >
+
+                                                <StackLayout Spacing="20" Orientation="Horizontal">
+                                                    <Label Text="{Binding Equation.InputName1}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                    <Entry Text="{Binding InputValue1}" Placeholder="000" Keyboard="Numeric"  BackgroundColor="Yellow" WidthRequest="70" HorizontalTextAlignment="End" Focused="Txt_Focussed"/>
+                                                    <Label Text="{Binding Equation.InputUnit1}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                </StackLayout>
+
+                                                <StackLayout Spacing="20" Orientation="Horizontal" IsVisible="{Binding InputVisible2}">
+                                                    <Label Text="{Binding Equation.InputName2}" TextColor="White" FontSize="14" VerticalOptions="Center" WidthRequest="70"/>
+                                                    <Entry Text="{Binding InputValue2}" Keyboard="Numeric" BackgroundColor="Yellow" WidthRequest="70" HorizontalTextAlignment="End" Focused="Txt_Focussed"/>
+                                                    <Label Text="{Binding Equation.InputUnit2}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                </StackLayout>
+                                                <StackLayout Spacing="20" Orientation="Horizontal" IsVisible="{Binding InputVisible3}">
+                                                    <Label Text="{Binding Equation.InputName3}" TextColor="White" FontSize="14" VerticalOptions="Center" WidthRequest="70" />
+                                                    <Entry Text="{Binding InputValue3}" Keyboard="Numeric"  BackgroundColor="Yellow" WidthRequest="70" HorizontalTextAlignment="End" Focused="Txt_Focussed"/>
+                                                    <Label Text="{Binding Equation.InputUnit3}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                </StackLayout>
+                                                <StackLayout Spacing="20" Orientation="Horizontal" IsVisible="{Binding InputVisible4}">
+                                                    <Label Text="{Binding Equation.InputName4}" TextColor="White" FontSize="14" VerticalOptions="Center" WidthRequest="70" />
+                                                    <Entry Text="{Binding InputValue4}" Keyboard="Numeric"  BackgroundColor="Yellow" WidthRequest="100" HorizontalTextAlignment="End" Focused="Txt_Focussed"/>
+                                                    <Label Text="{Binding Equation.InputUnit4}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                </StackLayout>
+                                                <StackLayout Spacing="20" Orientation="Horizontal" IsVisible="{Binding InputVisible5}">
+                                                    <Label Text="{Binding Equation.InputName5}" TextColor="White" FontSize="14" VerticalOptions="Center" WidthRequest="70"/>
+                                                    <Entry Text="{Binding InputValue5}" Keyboard="Numeric"  BackgroundColor="Yellow" WidthRequest="100" HorizontalTextAlignment="End" Focused="Txt_Focussed"/>
+                                                    <Label Text="{Binding Equation.InputUnit5}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+                                                </StackLayout>
+
+
+
+
+
+                                                <StackLayout Spacing="20" Orientation="Horizontal">
+                                                    <Label Text="Result: " TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70" />
+                                                    <Label Text="{Binding ResultValue,StringFormat='{0:F4}'}" BackgroundColor="White" WidthRequest="70" HorizontalTextAlignment="End" />
+                                                    <Label Text="{Binding Equation.ResultUnit}" TextColor="White" FontSize="14" VerticalOptions="Center"  WidthRequest="70"/>
+
+                                                </StackLayout>
+                                            </StackLayout>
+
+
+                                        </pv:PancakeView>
+
+                                    </StackLayout>
+
+
+                                </Expander.Content>
+                            </Expander>
+
+
+
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+
+                </StackLayout>
+
+
+            </ScrollView>
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

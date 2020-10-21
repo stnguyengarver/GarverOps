@@ -1,0 +1,8 @@
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\ibtool\_BundleResourceWithLogicalName.items
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\actool\_PartialAppManifest.items
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\actool\_BundleResourceWithLogicalName.items
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\coremlc\_PartialAppManifest.items
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\coremlc\_BundleResourceWithLogicalName.items
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\optimized\
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\SwipeMenu.iOS.csprojAssemblyReference.cache
+C:\sources\garver-engineers\Garver.GCalc\SwipeMenu\SwipeMenu.iOS\obj\iPhone\Release\SwipeMenu.iOS.csproj.CoreCompileInputs.cache

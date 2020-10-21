@@ -1,0 +1,14 @@
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\bin\Debug\netstandard2.0\SwipeMenu.deps.json
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\bin\Debug\netstandard2.0\SwipeMenu.dll
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\bin\Debug\netstandard2.0\ref\SwipeMenu.dll
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\bin\Debug\netstandard2.0\SwipeMenu.pdb
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.csprojAssemblyReference.cache
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.AssemblyInfoInputs.cache
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.AssemblyInfo.cs
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.csproj.CoreCompileInputs.cache
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\XamlC.stamp
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.dll
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\ref\SwipeMenu.dll
+C:\sources\garver-engineers\Xamarin.Forms-SwipeView-master\SwipeMenu\SwipeMenu\obj\Debug\netstandard2.0\SwipeMenu.pdb
