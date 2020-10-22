@@ -15,8 +15,7 @@
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.6.0.800",
           "Xamarin.Forms.PancakeView": "1.4.2",
-          "sqlite-net-pcl": "1.7.335",
-          "Mono.Android": "0.0.0.0"
+          "sqlite-net-pcl": "1.7.335"
         },
         "runtime": {
           "GarverOps.dll": {}
@@ -176,14 +175,6 @@
             "fileVersion": "1.4.1.0"
           }
         }
-      },
-      "Mono.Android/0.0.0.0": {
-        "runtime": {
-          "Mono.Android.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
       }
     }
   },
@@ -318,11 +309,6 @@
       "sha512": "sha512-0HGhwpvL8780UYmueP3Vazn6hmYB8GYEYyjkcPcW1qmnkYcfMc8h/9RZsDtUC7QFHikxCdxS29Aw8T0XrPETAQ==",
       "path": "xamarin.forms.pancakeview/1.4.2",
       "hashPath": "xamarin.forms.pancakeview.1.4.2.nupkg.sha512"
-    },
-    "Mono.Android/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

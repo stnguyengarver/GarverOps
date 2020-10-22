@@ -1,5 +1,4 @@
-﻿using Android.Hardware.Camera2;
-using GarverOps.Class;
+﻿using GarverOps.Class;
 using GarverOps.Services;
 using GarverOps.Views;
 using System;
@@ -95,8 +94,8 @@ namespace GarverOps.ViewModels
             MyCalcMenu = DataModel.GetLeftMenu();
             CalcMenuFront = DataModel.GetFrontMenu();
             DataModel.CreateData();
+
           
-      
         }
 
 

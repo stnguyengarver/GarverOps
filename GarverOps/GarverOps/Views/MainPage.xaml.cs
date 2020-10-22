@@ -24,6 +24,8 @@ namespace GarverOps
        
         
             this.BindingContext = mainPageVM;
+            Navigation.PushModalAsync(new eua());
+
         }
 
   
